@@ -19,6 +19,7 @@ const projects = [
     github:
       "https://github.com/nickfchmail-ux/next-supabse-AI-job-application-engine",
     demo: "https://www.youtube.com/watch?v=NvKCRjTVL2Q",
+    live: "https://automated-jobs-application-app.vercel.app/",
     description:
       "A job hunting dashboard that scrapes 30+ listings from JobsDB, CTgoodjobs, Indeed, LinkedIn and OfferToday. Features AI-generated fit scores, real-time scraping progress, secure authentication, and auto-categorized results with cover letter generation.",
   },
@@ -27,6 +28,7 @@ const projects = [
     tech: ["Next.js", "Supabase", "Stripe", "TanStack Query"],
     github: "https://github.com/nickfchmail-ux/next-supabase-pokemon-ecom-demo",
     demo: "https://www.youtube.com/watch?v=gqrcgNBPeUU",
+    live: "https://next-pokemon-ecom-demo.vercel.app/",
     description:
       "Full-stack e-commerce platform with NextAuth authentication, persistent cart, Stripe payments, infinite scrolling, real-time community chat supporting 10+ concurrent users, and an AI customer support chatbot powered by DeepSeek API.",
   },
@@ -500,6 +502,17 @@ export default function Home() {
                               >
                                 ▶ Watch Demo
                               </button>
+                            )}
+                            {project.live && (
+                              <a
+                                href={project.live}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                                className="relative z-10 inline-flex items-center gap-1.5 rounded-full border border-green/40 px-3 py-1 text-xs font-medium text-green transition-colors hover:bg-green/10"
+                              >
+                                🌐 Visit Site
+                              </a>
                             )}
                             {project.external && (
                               <a
