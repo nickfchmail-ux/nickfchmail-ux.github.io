@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { id: "experience", label: "🔥 EXPERIENCE" },
   { id: "projects", label: "🌊 PROJECTS" },
   { id: "education", label: "🌿 EDUCATION" },
+  { id: "hobbies", label: "🎮 HOBBIES" },
 ];
 
 const projects = [
@@ -583,47 +584,55 @@ export default function Home() {
               </div>
             </section>
 
+            {/* ── Hobbies ── */}
+            <section
+              id="hobbies"
+              data-section="hobbies"
+              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+            >
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-navy/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                <h2 className="text-sm font-bold uppercase tracking-widest text-lightest-slate lg:sr-only">
+                  Hobbies
+                </h2>
+              </div>
+              <div className="space-y-6">
+                <p className="text-light-slate leading-normal">
+                  Outside of coding, I keep life simple and fun.
+                </p>
+                <div className="grid gap-4 sm:grid-cols-3">
+                  <div className="group rounded-lg bg-lightest-navy/50 p-5 transition hover:bg-lightest-navy/80">
+                    <h3 className="flex items-center gap-2 font-medium text-lightest-slate">
+                      <span className="text-2xl">🍜</span> Eating
+                    </h3>
+                    <p className="mt-1 text-sm text-light-slate">
+                      Always on the hunt for good food — street eats, local gems, or anything that hits the spot.
+                    </p>
+                  </div>
+                  <div className="group rounded-lg bg-lightest-navy/50 p-5 transition hover:bg-lightest-navy/80">
+                    <h3 className="flex items-center gap-2 font-medium text-lightest-slate">
+                      <span className="text-2xl">✈️</span> Traveling
+                    </h3>
+                    <p className="mt-1 text-sm text-light-slate">
+                      Exploring new places, soaking in different cultures, and collecting memories along the way.
+                    </p>
+                  </div>
+                  <div className="group rounded-lg bg-lightest-navy/50 p-5 transition hover:bg-lightest-navy/80">
+                    <h3 className="flex items-center gap-2 font-medium text-lightest-slate">
+                      <span className="text-2xl">😂</span> Funny Stuff
+                    </h3>
+                    <p className="mt-1 text-sm text-light-slate">
+                      Scrolling social media for brainless but hilarious content — the kind of dumb funny moves that make life more enjoyable.
+                    </p>
+                  </div>
+                </div>
+                <p className="text-sm text-slate italic">
+                  If you share the same vibe — good food, random adventures, and laughing at silly things — we&apos;ll probably get along great.
+                </p>
+              </div>
+            </section>
+
             {/* ── Footer ── */}
             <footer className="max-w-md pb-16 text-sm text-slate sm:pb-0">
-              <p>
-                Loosely inspired by{" "}
-                <a
-                  href="https://brittanychiang.com"
-                  className="font-medium text-lightest-slate hover:text-green transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Brittany Chiang
-                </a>
-                . Built with{" "}
-                <a
-                  href="https://nextjs.org/"
-                  className="font-medium text-lightest-slate hover:text-green transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Next.js
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://tailwindcss.com/"
-                  className="font-medium text-lightest-slate hover:text-green transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Tailwind CSS
-                </a>
-                , deployed with{" "}
-                <a
-                  href="https://vercel.com/"
-                  className="font-medium text-lightest-slate hover:text-green transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Vercel
-                </a>
-                .
-              </p>
             </footer>
           </main>
         </div>
