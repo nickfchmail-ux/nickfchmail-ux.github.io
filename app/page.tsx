@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 /* ─── Data ─────────────────────────────────────────── */
 
@@ -238,7 +239,7 @@ export default function Home() {
                     priority
                   />
                 </div>
-                <a href="/">Nick Fong</a>
+                <Link href="/">Nick Fong</Link>
               </h1>
               <h2 className="mt-3 text-lg font-medium tracking-tight text-light-slate sm:text-xl">
                 Full-Stack Developer &amp; Operations Specialist
