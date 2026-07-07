@@ -61,6 +61,14 @@ const projects = [
 
 const experience = [
   {
+    period: "MAY — JUL 2026",
+    role: "Contract Junior Developer (Assigned to IBM)",
+    company: "PERSOL Hong Kong Limited",
+    description:
+      "Developed and maintained an enterprise-level web application for the Hong Kong Trade Development Council (HKTDC). Implemented Identity and Access Management (IAM) features for the Admin Portal to secure user authentication and role-based permissions. Collaborated on codebase maintenance, resolving functional bugs.",
+    tech: ["IAM", "Web Development", "Bug Fixing", "Enterprise"],
+  },
+  {
     period: "JUL 2024 — JUL 2025",
     role: "Betting System Implementation Officer",
     company: "The Hong Kong Jockey Club",
@@ -340,8 +348,12 @@ export default function Home() {
               </div>
               <div className="text-slate">
                 <p className="mb-4">
-                  I&apos;m a junior full-stack developer with a strong
-                  foundation in{" "}
+                  Junior Full-Stack Developer with hands-on experience building
+                  enterprise-level web applications, including implementing{" "}
+                  <span className="font-medium text-lightest-slate">
+                    Identity and Access Management (IAM)
+                  </span>{" "}
+                  features for secure admin portals. Strong foundation in{" "}
                   <span className="font-medium text-lightest-slate">
                     Next.js
                   </span>
@@ -354,37 +366,26 @@ export default function Home() {
                   , and{" "}
                   <span className="font-medium text-lightest-slate">
                     Django
+                  </span>{" "}
+                  with multiple production-ready applications deployed,
+                  including an AI-powered job search engine and an e-commerce
+                  platform with{" "}
+                  <span className="font-medium text-lightest-slate">
+                    Stripe
+                  </span>{" "}
+                  payment integration. Brings 5+ years of professional
+                  experience in business operations, stakeholder management, and
+                  process improvement from roles at{" "}
+                  <span className="font-medium text-lightest-slate">
+                    IBM (via PERSOL)
                   </span>
-                  . I&apos;ve built and deployed multiple production-ready
-                  applications, including an AI-powered job search engine and an
-                  e-commerce platform with payment integration.
-                </p>
-                <p className="mb-4">
-                  Before transitioning into development, I spent 5+ years in
-                  business operations, stakeholder management, and process
-                  improvement at organizations like the{" "}
+                  , the{" "}
                   <span className="font-medium text-lightest-slate">
                     Hong Kong Jockey Club
-                  </span>{" "}
-                  and{" "}
+                  </span>
+                  , and{" "}
                   <span className="font-medium text-lightest-slate">HKTDC</span>
-                  . This background gives me a unique perspective — I don&apos;t
-                  just write code, I understand the business problems it needs
-                  to solve.
-                </p>
-                <p>
-                  My QA experience with{" "}
-                  <span className="font-medium text-lightest-slate">Jira</span>{" "}
-                  and{" "}
-                  <span className="font-medium text-lightest-slate">
-                    Appium
-                  </span>{" "}
-                  means I write reliable, testable code. My work with{" "}
-                  <span className="font-medium text-lightest-slate">
-                    Azure Computer Vision
-                  </span>{" "}
-                  at HKTDC proves I can apply AI to solve real business
-                  problems, not just build demos.
+                  .
                 </p>
               </div>
             </section>
