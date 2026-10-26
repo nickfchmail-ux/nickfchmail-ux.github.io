@@ -7,13 +7,69 @@ import { useCallback, useEffect, useState } from "react";
 
 const NAV_ITEMS = [
   { id: "about", label: "⚡ ABOUT" },
+  { id: "skills", label: "🧩 SKILLS" },
   { id: "experience", label: "🔥 EXPERIENCE" },
   { id: "projects", label: "🌊 PROJECTS" },
   { id: "education", label: "🌿 EDUCATION" },
   { id: "hobbies", label: "🎮 HOBBIES" },
 ];
 
+const skills = [
+  {
+    label: "Frontend",
+    items: [
+      "Next.js",
+      "React",
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+    ],
+  },
+  {
+    label: "Backend",
+    items: [
+      "Node.js",
+      "Express",
+      "Django REST Framework",
+      "MongoDB",
+      "Mongoose",
+      "Supabase",
+      "JWT",
+    ],
+  },
+  {
+    label: "Security & IAM",
+    items: [
+      "Role-Based Access Control (RBAC)",
+      "User Authentication",
+      "JWT",
+      "Session Management",
+    ],
+  },
+  {
+    label: "Tools & Platforms",
+    items: ["Git", "Vercel", "Render", "Socket.IO", "Stripe", "Jira", "Azure"],
+  },
+];
+
 const projects = [
+  {
+    title: "AI Powered Personal YouTube Library",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "Azure Functions",
+      "Upstash Redis",
+    ],
+    github: "https://github.com/nickfchmail-ux/next-youtube",
+    demo: "https://www.youtube.com/watch?v=BGOv7NoGgrw&t=6s",
+    live: "https://next-youtube-eight.vercel.app",
+    description:
+      "A YouTube learning workspace that turns scattered tutorials into a study plan. Every video is scored against your own learning goal, the full timestamped transcript is chat-indexed so you can ask the video a question and jump to the exact moment, and evaluated videos are assembled into an ordered roadmap. Built cloud-native: Supabase with row-level security, Upstash Redis caching, and Azure Functions fanning out AI evaluation in parallel instead of one video at a time.",
+  },
   {
     title: "AI Powered Jobs Search Engine",
     tech: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
@@ -242,7 +298,7 @@ export default function Home() {
                 <Link href="/">Nick Fong</Link>
               </h1>
               <h2 className="mt-3 text-lg font-medium tracking-tight text-light-slate sm:text-xl">
-                Full-Stack Developer &amp; Operations Specialist
+                Full-Stack Developer
               </h2>
               <p className="mt-4 max-w-xs leading-normal text-slate">
                 I build AI-powered solutions and scalable web applications with
@@ -254,12 +310,12 @@ export default function Home() {
                 className="nav hidden lg:block"
                 aria-label="In-page jump links"
               >
-                <ul className="mt-16 w-max">
+                <ul className="mt-12 w-max">
                   {NAV_ITEMS.map((item) => (
                     <li key={item.id}>
                       <a
                         href={`#${item.id}`}
-                        className={`group flex items-center py-3 ${
+                        className={`group flex items-center py-2.5 ${
                           activeSection === item.id ? "active" : ""
                         }`}
                       >
@@ -349,12 +405,8 @@ export default function Home() {
               </div>
               <div className="text-slate">
                 <p className="mb-4">
-                  Junior Full-Stack Developer with hands-on experience building
-                  enterprise-level web applications, including implementing{" "}
-                  <span className="font-medium text-lightest-slate">
-                    Identity and Access Management (IAM)
-                  </span>{" "}
-                  features for secure admin portals. Strong foundation in{" "}
+                  I&apos;m a junior full-stack developer with a strong
+                  foundation in{" "}
                   <span className="font-medium text-lightest-slate">
                     Next.js
                   </span>
@@ -367,27 +419,71 @@ export default function Home() {
                   , and{" "}
                   <span className="font-medium text-lightest-slate">
                     Django
-                  </span>{" "}
-                  with multiple production-ready applications deployed,
-                  including an AI-powered job search engine and an e-commerce
-                  platform with{" "}
-                  <span className="font-medium text-lightest-slate">
-                    Stripe
-                  </span>{" "}
-                  payment integration. Brings 5+ years of professional
-                  experience in business operations, stakeholder management, and
-                  process improvement from roles at{" "}
-                  <span className="font-medium text-lightest-slate">
-                    IBM (via PERSOL)
                   </span>
-                  , the{" "}
+                  . I&apos;ve built and deployed multiple production-ready
+                  applications, including an AI-powered job search engine and an
+                  e-commerce platform with payment integration.
+                </p>
+                <p className="mb-4">
+                  Most recently I worked as a contract junior developer at{" "}
+                  <span className="font-medium text-lightest-slate">IBM</span>{" "}
+                  (via PERSOL), building and maintaining an enterprise admin
+                  portal for{" "}
+                  <span className="font-medium text-lightest-slate">HKTDC</span>
+                  . I shipped the{" "}
+                  <span className="font-medium text-lightest-slate">
+                    Identity and Access Management
+                  </span>{" "}
+                  features — authentication and role-based permissions — and
+                  worked through functional bugs across the application.
+                </p>
+                <p>
+                  Before transitioning into development, I spent 5+ years in
+                  business operations, stakeholder management, and process
+                  improvement at organizations like the{" "}
                   <span className="font-medium text-lightest-slate">
                     Hong Kong Jockey Club
-                  </span>
-                  , and{" "}
+                  </span>{" "}
+                  and{" "}
                   <span className="font-medium text-lightest-slate">HKTDC</span>
-                  .
+                  . This background gives me a unique perspective — I don&apos;t
+                  just write code, I understand the business problems it needs
+                  to solve.
                 </p>
+              </div>
+            </section>
+
+            {/* ── Skills ── */}
+            <section
+              id="skills"
+              data-section="skills"
+              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+            >
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-navy/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                <h2 className="text-sm font-bold uppercase tracking-widest text-lightest-slate lg:sr-only">
+                  Skills
+                </h2>
+              </div>
+              <div className="space-y-6">
+                {skills.map((group) => (
+                  <div key={group.label}>
+                    <h3 className="text-xs font-semibold uppercase tracking-wide text-lightest-slate">
+                      {group.label}
+                    </h3>
+                    <ul
+                      className="mt-2 flex flex-wrap"
+                      aria-label={`${group.label} technologies`}
+                    >
+                      {group.items.map((item) => (
+                        <li key={item} className="mr-1.5 mt-2">
+                          <div className="flex items-center rounded-full bg-green-tint px-3 py-1 text-xs font-medium leading-5 text-green">
+                            {item}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </section>
 
@@ -591,7 +687,7 @@ export default function Home() {
                     <li>Advanced CSS and Sass — Jonas Schmedtmann</li>
                     <li>
                       Python Django – The Practical Guide — Maximilian
-                      Schwarzm\u00fcller
+                      Schwarzmüller
                     </li>
                     <li>100 Days of Code: Python Pro Bootcamp — Angela Yu</li>
                   </ul>
@@ -648,6 +744,28 @@ export default function Home() {
 
             {/* ── Footer ── */}
             <footer className="max-w-md pb-16 text-sm text-slate sm:pb-0">
+              <p>
+                Built with{" "}
+                <a
+                  href="https://nextjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-light-slate transition-colors hover:text-green"
+                >
+                  Next.js
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://tailwindcss.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-light-slate transition-colors hover:text-green"
+                >
+                  Tailwind CSS
+                </a>
+                , deployed on GitHub Pages.
+              </p>
+              <p className="mt-2">© 2026 Nick Fong. All rights reserved.</p>
             </footer>
           </main>
         </div>
