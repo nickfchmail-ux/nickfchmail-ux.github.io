@@ -1,8 +1,8 @@
 name: Deploy to GitHub Pages
 
+# Deployment is handled by Vercel. This workflow is manual-only so it does not
+# run (and fail) on every push while GitHub Actions is blocked on the account.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
